@@ -302,7 +302,7 @@ server <- function(input, output, session) {
   ## simmulate H0 and Ha ----
   dataH0 <- reactive({
     temp <- data_cbo()
-    temp$site <- "T0"
+    temp[,1] <- "T0"
     return(temp)
   })
   dataHa <- reactive({
